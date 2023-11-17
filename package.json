@@ -7,7 +7,9 @@
   "types": "bin/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc -t es5 src/index.ts"
+    "build": "tsc -t es5 src/index.ts",
+    "prepublish": "npm run build",
+    "push": "npm publish --access=public"
   },
   "keywords": [
     "Notification"
