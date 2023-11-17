@@ -1,0 +1,20 @@
+{
+  "name": "@rafong/notification",
+  "version": "1.0.0",
+  "description": "通知组件",
+  "main": "bin/index.js",
+  "bin": "bin/index.js",
+  "types": "bin/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -t es5 src/index.ts"
+  },
+  "keywords": [
+    "Notification"
+  ],
+  "author": "Rafong",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^17.0.17"
+  }
+}
