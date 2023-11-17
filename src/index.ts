@@ -10,13 +10,15 @@ class NotificationClass {
     this.notificationList = []
 
     // 检查当前运行环境
-    if (environmentSupport()) throw new Error('必须是HTTPS或者localhost')
+    if (environmentSupport()) {
+      console.warn('必须是HTTPS或者localhost')
+    } else {
+      // 保存全局配置
+      this.setGlobalOptions = options
 
-    // 保存全局配置
-    this.setGlobalOptions = options
-
-    // 申请通知权限
-    this.requestPermission()
+      // 申请通知权限
+      this.requestPermission()
+    }
   }
 
   // 打开通知
@@ -64,7 +66,7 @@ class NotificationClass {
     if (!this.permission || (this.permission && this.permission !== 'denied')) {
       return this.NotificationAPI.requestPermission()
     } else {
-      throw console.warn('通知权限被拒绝')
+      console.warn('通知权限被拒绝')
     }
   }
 
