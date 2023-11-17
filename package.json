@@ -1,6 +1,6 @@
 {
   "name": "@rafong/notification",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "通知组件",
   "main": "bin/index.js",
   "bin": "bin/index.js",
